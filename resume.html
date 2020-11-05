@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,500,700,900|PT+Serif:400,700"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "PT Serif", serif;
+        font-size: 1.3rem;
+        color: black;
+      }
+
+      body.nightmode {
+        color: silver;
+        background: black;
+      }
+
+      .toggle,
+      .print {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+        top: 5rem;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+      }
+
+      .print {
+        top: 10rem;
+        text-align: center;
+      }
+
+      .toggle:before {
+        display: block;
+        text-align: center;
+        content: "Aa";
+      }
+
+      body:not(.nightmode) .toggle:before,
+      body:not(.nightmode) .print {
+        background: black;
+        color: silver;
+      }
+
+      body:not(.nightmode) .print a {
+        color: silver;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .nightmode .toggle:before {
+        background: silver;
+        color: black;
+      }
+
+      .nightmode .print {
+        background: silver;
+        color: black;
+      }
+
+      .nightmode .print a {
+        color: black;
+      }
+
+      .nightmode .print a:hover {
+        color: cadetblue;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        margin: 0 0 0.5em;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-weight: 700;
+        text-align: center;
+        margin: 1rem 0 0;
+      }
+
+      h1 + h2 {
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      h3 > span {
+        font-size: 0.6em;
+        vertical-align: middle;
+      }
+
+      h3 a {
+        color: cadetblue;
+        text-decoration: none;
+        border-bottom: 1px dashed;
+      }
+
+      header ul {
+        display: flex;
+        flex-dire: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      header ul li {
+        list-style: none;
+        margin: 0 1em 0 0;
+      }
+
+      header ul li a {
+        color: cadetblue;
+      }
+
+      section {
+        margin: 2rem auto;
+        max-width: 30rem;
+      }
+
+      section:first-of-type h2 {
+        text-align: center;
+        margin: 3rem 0 1rem;
+      }
+
+      section:first-of-type ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 1rem;
+        padding: 0;
+      }
+
+      section:first-of-type li {
+        list-style: none;
+        margin: 0 1em 0.5rem 0;
+        text-align: center;
+      }
+
+      section:first-of-type span {
+        display: block;
+        text-align: center;
+        width: 3em;
+        height: 3em;
+        line-height: 2.5em;
+        margin: 0 auto;
+        border: 0.3em solid;
+        border-radius: 3em;
+        font-weight: 700;
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+        font-size: 1.2em;
+      }
+
+      section article {
+        margin: 1rem 0 2rem;
+      }
+
+      @media print {
+        body.nightmode {
+          color: black;
+          background: transparent;
+        }
+
+        .toggle,
+        .print {
+          visibility: hidden;
+        }
+      }
+
+      .profileImage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+    <title>Resume Title</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vladut Chisu</h1>
+      <h2>+40 756 850 911 | chisu.vladut@gmail.com | Bucharest, Romania</h2>
+
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/vladut-chisu-8ba075b2/"
+            >LinkedIn</a
+          >
+        </li>
+        <!-- <li><a href="javascript:;">Twitter</a></li> -->
+      </ul>
+      <span class="toggle"></span>
+      <span class="print"><a href="javascript:window.print()">Print</a></span>
+    </header>
+
+    <main>
+      <section>
+        <img
+          src="profilePicture.png"
+          alt="profile picture"
+          class="profileImage"
+        />
+        <h2>Quick info</h2>
+        <ul>
+          <li><span>2</span> Years as dev</li>
+          <li><span>10</span> Months at current job</li>
+          <li><span>B.E</span> Electrical and telecommunication engineering</li>
+        </ul>
+      </section>
+      <section>
+        <h2>
+          Working <br />
+          Knowledge
+        </h2>
+        <p>Junior developer with 2+ years of experience.</p>
+        <p>
+          Developed platforms from middle to large sized projects, front-end
+          wise, with the help of:
+        </p>
+        <ul>
+          <li>JAVA 8 EE</li>
+          <li>JavaScript ES5 + ES6</li>
+          <li>React JS</li>
+          <li>React Native</li>
+          <li>Xcode</li>
+          <li>Swift</li>
+          <li>Android Studio</li>
+        </ul>
+        <h3>Tools of the trade</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>StackOverflow</li>
+          <li>MacOS</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>
+          Work <br />
+          Experience
+        </h2>
+        <article>
+          <h3>
+            Junior front-end Developer (10 months)
+            <span
+              ><a
+                rel="nofollow"
+                target="_blank"
+                href="http://www.wtzconsult.com/"
+                >visit company website</a
+              ></span
+            >
+          </h3>
+          <h4>WTZ Consult | JAN 2020 - present</h4>
+          <p>
+            • Focused on developing apps from medium to large scale, developing
+            on front-end side
+          </p>
+          <!-- <ul>
+          <li>Big Client 1</li>
+          <li>Big Client 2</li>
+          <li>Big Client 3</li>
+        </ul> -->
+        </article>
+
+        <article>
+          <h3>
+            Junior iOS programmer (1 year and 3 months)
+            <span
+              ><a rel="nofollow" target="_blank" href="https://lastgear.com/"
+                >visit company website</a
+              ></span
+            >
+          </h3>
+          <h4>Last Gear Publishing | Oct 2018 - Dec 2019</h4>
+          <p>
+            • Build and design applications for the iOS platform using and
+            language
+          </p>
+
+          <h4>Tech-stack:</h4>
+          <ul>
+            <li>Xcode</li>
+            <li>Swift</li>
+            <li>MacOS</li>
+            <li>UI View</li>
+            <li>SpriteKit</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>
+            Game Tester (4 years and 8 months)
+            <span
+              ><a rel="nofollow" target="_blank" href="https://tedrasoft.com/"
+                >visit company website</a
+              ></span
+            >
+          </h3>
+          <h4>Tedrasoft | Mar 2014 - Oct 2018</h4>
+          <p>• Finding bugs and errors on each app</p>
+          <p>
+            • Creating and testing levels for games to improve user experience
+          </p>
+          <p>• Choosing music and sounds for apps</p>
+          <p>• Creating promo videos for each app developed</p>
+          <p>• UI and UX</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <article>
+          <p>University POLITEHNICA Bucharest | Bucharest, Romania</p>
+          <p>Electrical and telecommunication engineering using means of transpor</p>
+          <!-- <p>Electrical Engineering </p> -->
+        </article>
+
+        <article>
+          <h3>Certificates</h3>
+          <p>Cambridge ESOL Level 1 Certificate in ESOL International</p>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      var body = document.querySelector("body"),
+        toggle = document.querySelector(".toggle");
+
+      toggle.onclick = function () {
+        body.classList.toggle("nightmode");
+      }; // this enables your night mode functionality
+      toggle.click(); // comment this out if you don't want the night mode theme enabled by default
+    </script>
+  </body>
+</html>
